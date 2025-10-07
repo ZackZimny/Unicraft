@@ -5,6 +5,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import Image from "next/image";
 import UnicraftLogo from "../../public/unicraft-logo.svg";
 import { Button, Container, Box, Typography, Card, CardContent } from "@mui/material";
+import ImageGallery from "../components/ImageGallery";
 
 export default function Home() {
 	return (
@@ -91,26 +92,14 @@ export default function Home() {
 						<Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
 							Browse our collection of virtual campus tours
 						</Typography>
-						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 1</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 2</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 3</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 4</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 5</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 6</Typography>
-							</Card>
-						</div>
+						<ImageGallery images={[
+							{ src: "Campus Screenshot 1", caption: "Beautiful campus view 1" },
+							{ src: "Campus Screenshot 2", caption: "Stunning architecture 2" },
+							{ src: "Campus Screenshot 3", caption: "Vibrant student life 3" },
+							{ src: "Campus Screenshot 4", caption: "Modern facilities 4" },
+							{ src: "Campus Screenshot 5", caption: "Historic buildings 5" },
+							{ src: "Campus Screenshot 6", caption: "Green spaces 6" }
+						]} />
 					</Container>
 				</Box>
 
