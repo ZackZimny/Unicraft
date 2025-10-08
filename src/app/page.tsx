@@ -19,7 +19,7 @@ export default function Home() {
 				<div className="flex items-center gap-2">
 					<Button variant="text" sx={{ color: "blue" }}>Login</Button>
 					<Button variant="contained" sx={{ bgcolor: "#f59e0b", color: "white", "&:hover": { bgcolor: "#d97706" } }}>Sign Up</Button>
-					<MenuIcon sx={{ fontSize: 40, color: "white", cursor: "pointer", ml: 1 }} />
+					<MenuIcon sx={{ fontSize: 40, color: "#1976d2", cursor: "pointer", ml: 1 }} />
 				</div>
 			</header>
 
