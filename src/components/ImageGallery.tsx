@@ -27,7 +27,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 		<Box>
 			<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
 				<IconButton onClick={handlePrev} disabled={!canGoPrev}>
-					<ArrowBackIcon sx={{ color: canGoPrev ? 'white' : 'transparent' }} />
+					<ArrowBackIcon sx={{ color: canGoPrev ? '#0f172a' : 'transparent' }} />
 				</IconButton>
 				<Box sx={{ display: 'flex', gap: 2, flex: 1 }}>
 					{images.slice(currentIndex, currentIndex + 2).map((image, idx) => (
@@ -37,7 +37,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 					))}
 				</Box>
 				<IconButton onClick={handleNext} disabled={!canGoNext}>
-					<ArrowForwardIcon sx={{ color: canGoNext ? 'white' : 'transparent' }} />
+					<ArrowForwardIcon sx={{ color: canGoNext ? '#0f172a' : 'transparent' }} />
 				</IconButton>
 			</Box>
 			<Typography variant="body1" textAlign="center" sx={{ mt: 2 }}>

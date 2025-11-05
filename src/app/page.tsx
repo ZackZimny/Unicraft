@@ -9,8 +9,8 @@ import ImageGallery from "../components/ImageGallery";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen flex flex-col">
-			<header className="sticky top-0 bg-gray-200 flex-nowrap flex w-full items-center justify-between p-4 shadow-md z-50">
+		<div className="min-h-screen flex flex-col bg-[#f5f9ff]">
+			<header className="sticky top-0 bg-[#eaf2ff] flex-nowrap flex w-full items-center justify-between p-4 shadow-md z-50">
 				<Image
 					src={UnicraftLogo}
 					alt="Unicraft logo"
@@ -24,7 +24,7 @@ export default function Home() {
 			</header>
 
 			<main className="flex-1">
-				<Box sx={{ bgcolor: "primary.main", color: "white", py: 8 }}>
+				<Box sx={{ bgcolor: "#eef5ff", color: "#0f172a", py: 8 }}>
 					<Container maxWidth="lg">
 						<Typography variant="h2" component="h1" gutterBottom fontWeight="bold" textAlign="center">
 							Experience College Tours Like Never Before
@@ -32,14 +32,15 @@ export default function Home() {
 						<Typography variant="h5" textAlign="center" sx={{ mb: 4, opacity: 0.9 }}>
 							Explore university campuses in immersive Minecraft worlds
 						</Typography>
-						<Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-							<Button variant="contained" size="large" sx={{ bgcolor: "#f59e0b", color: "white", "&:hover": { bgcolor: "#d97706" }, px: 4 }}>
-								Start Exploring
-							</Button>
-							<Button variant="outlined" size="large" sx={{ borderColor: "white", color: "white", "&:hover": { borderColor: "gray.100", bgcolor: "rgba(255,255,255,0.1)" }, px: 4 }}>
-								Learn More
-							</Button>
-						</Box>
+					<Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
+						<Button variant="contained" size="large" sx={{ bgcolor: "#2563eb", color: "white", "&:hover": { bgcolor: "#1e40af" }, px: 4 }}>
+							Start Exploring
+						</Button>
+						<Button variant="outlined" size="large" sx={{ borderColor: "#2563eb", color: "#2563eb", "&:hover": { borderColor: "#1e40af", bgcolor: "rgba(37,99,235,0.06)" }, px: 4 }}>
+							Learn More
+						</Button>
+					</Box>
+
 					</Container>
 				</Box>
 
@@ -84,7 +85,7 @@ export default function Home() {
 					</div>
 				</Container>
 
-				<Box sx={{ bgcolor: "gray.50", py: 8 }}>
+				<Box sx={{ bgcolor: "#f0f6ff", py: 8 }}>
 					<Container maxWidth="lg">
 						<Typography variant="h3" component="h2" gutterBottom textAlign="center" fontWeight="bold" sx={{ mb: 2 }}>
 							Featured Campus Tours
@@ -114,15 +115,16 @@ export default function Home() {
 						Get Started Today
 					</Button>
 				</Container>
-			</main>
+		</main>
 
-			<footer className="bg-gray-800 text-white py-6">
-				<Container maxWidth="lg">
-					<Typography variant="body2" textAlign="center">
-						© 2025 Unicraft. All rights reserved.
-					</Typography>
-				</Container>
-			</footer>
+		<footer className="bg-[#e0edff] text-gray-700 py-6">
+			<Container maxWidth="lg">
+				<Typography variant="body2" textAlign="center">
+					© 2025 Unicraft. All rights reserved.
+				</Typography>
+			</Container>
+		</footer>
+
 		</div>
 	);
 }
