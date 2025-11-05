@@ -5,11 +5,12 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import Image from "next/image";
 import UnicraftLogo from "../../public/unicraft-logo.svg";
 import { Button, Container, Box, Typography, Card, CardContent } from "@mui/material";
+import ImageGallery from "../components/ImageGallery";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen flex flex-col">
-			<header className="sticky top-0 bg-gray-200 flex-nowrap flex w-full items-center justify-between p-4 shadow-md z-50">
+		<div className="min-h-screen flex flex-col bg-[#f5f9ff]">
+			<header className="sticky top-0 bg-[#eaf2ff] flex-nowrap flex w-full items-center justify-between p-4 shadow-md z-50">
 				<Image
 					src={UnicraftLogo}
 					alt="Unicraft logo"
@@ -18,12 +19,12 @@ export default function Home() {
 				<div className="flex items-center gap-2">
 					<Button variant="text" sx={{ color: "blue" }}>Login</Button>
 					<Button variant="contained" sx={{ bgcolor: "#f59e0b", color: "white", "&:hover": { bgcolor: "#d97706" } }}>Sign Up</Button>
-					<MenuIcon sx={{ fontSize: 40, color: "white", cursor: "pointer", ml: 1 }} />
+					<MenuIcon sx={{ fontSize: 40, color: "#1976d2", cursor: "pointer", ml: 1 }} />
 				</div>
 			</header>
 
 			<main className="flex-1">
-				<Box sx={{ bgcolor: "primary.main", color: "white", py: 8 }}>
+				<Box sx={{ bgcolor: "#eef5ff", color: "#0f172a", py: 8 }}>
 					<Container maxWidth="lg">
 						<Typography variant="h2" component="h1" gutterBottom fontWeight="bold" textAlign="center">
 							Experience College Tours Like Never Before
@@ -31,14 +32,15 @@ export default function Home() {
 						<Typography variant="h5" textAlign="center" sx={{ mb: 4, opacity: 0.9 }}>
 							Explore university campuses in immersive Minecraft worlds
 						</Typography>
-						<Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-							<Button variant="contained" size="large" sx={{ bgcolor: "#f59e0b", color: "white", "&:hover": { bgcolor: "#d97706" }, px: 4 }}>
-								Start Exploring
-							</Button>
-							<Button variant="outlined" size="large" sx={{ borderColor: "white", color: "white", "&:hover": { borderColor: "gray.100", bgcolor: "rgba(255,255,255,0.1)" }, px: 4 }}>
-								Learn More
-							</Button>
-						</Box>
+					<Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
+						<Button variant="contained" size="large" sx={{ bgcolor: "#2563eb", color: "white", "&:hover": { bgcolor: "#1e40af" }, px: 4 }}>
+							Start Exploring
+						</Button>
+						<Button variant="outlined" size="large" sx={{ borderColor: "#2563eb", color: "#2563eb", "&:hover": { borderColor: "#1e40af", bgcolor: "rgba(37,99,235,0.06)" }, px: 4 }}>
+							Learn More
+						</Button>
+					</Box>
+
 					</Container>
 				</Box>
 
@@ -83,7 +85,7 @@ export default function Home() {
 					</div>
 				</Container>
 
-				<Box sx={{ bgcolor: "gray.50", py: 8 }}>
+				<Box sx={{ bgcolor: "#f0f6ff", py: 8 }}>
 					<Container maxWidth="lg">
 						<Typography variant="h3" component="h2" gutterBottom textAlign="center" fontWeight="bold" sx={{ mb: 2 }}>
 							Featured Campus Tours
@@ -91,26 +93,14 @@ export default function Home() {
 						<Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
 							Browse our collection of virtual campus tours
 						</Typography>
-						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 1</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 2</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 3</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 4</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 5</Typography>
-							</Card>
-							<Card sx={{ height: 300, bgcolor: "gray.200", display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<Typography variant="h6" color="text.secondary">Campus Screenshot 6</Typography>
-							</Card>
-						</div>
+						<ImageGallery images={[
+							{ src: "Campus Screenshot 1", caption: "Beautiful campus view 1" },
+							{ src: "Campus Screenshot 2", caption: "Stunning architecture 2" },
+							{ src: "Campus Screenshot 3", caption: "Vibrant student life 3" },
+							{ src: "Campus Screenshot 4", caption: "Modern facilities 4" },
+							{ src: "Campus Screenshot 5", caption: "Historic buildings 5" },
+							{ src: "Campus Screenshot 6", caption: "Green spaces 6" }
+						]} />
 					</Container>
 				</Box>
 
@@ -125,15 +115,16 @@ export default function Home() {
 						Get Started Today
 					</Button>
 				</Container>
-			</main>
+		</main>
 
-			<footer className="bg-gray-800 text-white py-6">
-				<Container maxWidth="lg">
-					<Typography variant="body2" textAlign="center">
-						© 2025 Unicraft. All rights reserved.
-					</Typography>
-				</Container>
-			</footer>
+		<footer className="bg-[#e0edff] text-gray-700 py-6">
+			<Container maxWidth="lg">
+				<Typography variant="body2" textAlign="center">
+					© 2025 Unicraft. All rights reserved.
+				</Typography>
+			</Container>
+		</footer>
+
 		</div>
 	);
 }
